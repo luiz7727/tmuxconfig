@@ -1,0 +1,11 @@
+bind-key -n C-x split-window -h # split para horizontal
+bind-key -n C-n split-window -v # split para vertical
+bind-key -n C-j confirm-before -p "Close this pane ? (y/n)" kill-pane 
+bind-key -n C-d confirm-before "kill-window" #Fecha todos os terminais abertos 
+
+#Switch panes
+bind-key -n C-Up select-pane -U  # switch to pane top
+bind-key -n C-Down select-pane -t :.+
+bind-key -n C-left select-pane -L
+bind-key -n C-Right select-pane -R
+set -g mouse on # habilita o mouse
