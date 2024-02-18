@@ -1,7 +1,10 @@
 bind-key -n C-x split-window -h # split para horizontal
 bind-key -n C-n split-window -v # split para vertical
 bind-key -n C-j confirm-before -p "Close this pane ? (y/n)" kill-pane 
-bind-key -n C-d confirm-before "kill-window" #Fecha todos os terminais abertos 
+bind-key -n C-d confirm-bedfore "kill-window" #Fecha todos os terminais abertos
+bind-key -n C-f new-session -d -n "#{tmux_prompt:'Enter session name:'}" \; switch-client -n
+bind-key -n C-u confirm-before -p "Do you really want to kill the session ?" kill-session
+bind-key -n C-q switch-client -n #switch between sessions
 
 #Switch panes
 bind-key -n C-Up select-pane -U  # switch to pane top
